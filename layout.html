@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Hind+Siliguri&display=swap');
+    body { margin: 0;
+        }
+
+    .pagina{
+        background-color: rgb(230, 230, 230);
+        
+    }
+    .rejilla{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows:1fr 3fr 5fr 5fr 1fr ;
+        padding: 10px;
+        
+    }
+    .barra{
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        background-color: rgb(39, 39, 39);
+        color: white;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 70% 30% ;
+        position: sticky;
+        top: 0;
+        z-index: 1
+
+    }
+    .principal{
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        background-color: rgb(49, 46, 46);
+        color: white;
+        padding: 0px;
+        display: flex;
+        justify-content: center;  
+        border-end-end-radius: 20px;
+        border-end-start-radius: 20px;
+        width: 100%;
+	    margin: auto;
+	    overflow: hidden;
+    }
+    .principal ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+    .s1{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    .s2{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4 ;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    .s3{
+        grid-column: 1 / 3;
+        grid-row: 4 / 5 ;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        padding: 50px;
+        border-radius: 10px;
+        margin: 10px;
+        align-items: center;
+    }
+    .pie{
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+
+    }
+    .redes{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+        }
+    .redes1{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2; 
+        margin: 20px;
+    }
+    .redes2{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3; 
+        margin: 20px;
+    }
+    .redes3{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2; 
+        margin: 20px;
+    }
+    .redes4{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3; 
+        margin: 20px;
+    }
+    .redes5{    
+        grid-column: 3 / 4;
+        grid-row: 1 / 2; 
+        margin: 20px;
+    }
+    .redes6{
+        grid-column: 3 / 4;
+        grid-row: 2 / 3; 
+        margin: 20px;
+    }
+    .barraprincipal{
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        font-family: 'Della Respira';
+        font-size: x-large;
+
+    }
+
+    .barrahome{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;   
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        font-family: 'Dancing Script';
+        font-size: 25px;
+        -webkit-transition: color 2s linear;
+        transition: color 2s linear;
+        transition-property: background-color;
+        transition-duration: 2s;
+    }
+        .barrahome:hover{
+        color: rgb(0, 0, 0);
+        background-color: #ffffff
+    }
+
+    .barrashop{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;   
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        font-family: 'Dancing Script';
+        font-size: 25px;
+        -webkit-transition: color 2s linear;
+        transition: color 2s linear;
+        transition-property: background-color;
+        transition-duration: 2s;
+    }
+        .barrashop:hover{
+        color: rgb(0, 0, 0);
+        background-color: #ffffff
+    }
+    .barracontact{
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;   
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        font-family: 'Dancing Script';
+        font-size: 25px;
+        -webkit-transition: color 2s linear;
+        transition: color 2s linear;
+        transition-property: background-color;
+        transition-duration: 2s;
+    }
+        .barracontact:hover{
+        color: rgb(0, 0, 0);
+        background-color: #ffffff
+    }
+    .barraofertas{
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;   
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        font-family: 'Dancing Script';
+        font-size: 25px;
+        -webkit-transition: color 2s linear;
+        transition: color 2s linear;
+        transition-property: background-color;
+        transition-duration: 2s;
+    }
+        .barraofertas:hover{
+        color: rgb(0, 0, 0);
+        background-color: #ffffff
+    }
+    .titulos2{
+        font-family: 'Hind Siliguri';
+
+    }
+    .i1{
+        width: 300px;
+        height: 200px;
+        transition: transform .2s;
+        -webkit-transition: 0.5s linear;
+        transition: 0.5s linear;
+        background-color: #F1C40F;
+} 
+    .i1:hover { 
+        transform: scale(1.2); 
+        -webkit-box-shadow: 5px 5px 7px 1px;
+    }
+    .i2{
+        width: 300px;
+        height: 200px;
+        transition: transform .2s;
+        -webkit-transition: 0.5s linear;
+        transition: 0.5s linear;
+        background-color: #F1C40F;
+    }
+    .i2:hover {
+        transform: scale(1.2); 
+        -webkit-box-shadow: 5px 5px 7px 1px;
+    }
+    .i3{
+        width: 300px;
+        height: 200px;
+        transition: transform .2s;
+        -webkit-transition: 0.5s linear;
+        transition: 0.5s linear;
+        background-color: #F1C40F;
+    }
+    .i3:hover {
+        transform: scale(1.2); 
+        -webkit-box-shadow: 5px 5px 7px 1px; 
+    }
+    .i4{
+        width: 300px;
+        height: 200px;
+        transition: transform .2s;
+        -webkit-transition: 0.5s linear;
+        transition: 0.5s linear;
+        background-color: #F1C40F;
+    }
+    .i4:hover {
+        transform: scale(1.2); 
+        -webkit-box-shadow: 5px 5px 7px 1px;
+        
+    }
+    .i5{
+        width: 300px;
+        height: 200px;
+        transition: transform .2s;
+        -webkit-transition: 0.5s linear;
+        transition: 0.5s linear;
+        background-color: #F1C40F;
+    }
+    .i5:hover {
+        transform: scale(1.2); 
+        -webkit-box-shadow: 5px 5px 7px 1px;
+    }
+    .i6{
+        width: 300px;
+        height: 200px;
+        transition: transform .2s;
+        -webkit-transition: 0.5s linear;
+        transition: 0.5s linear;
+        background-color: #F1C40F;
+    }
+    .i6:hover {
+        transform: scale(1.2); 
+        -webkit-box-shadow: 5px 5px 7px 1px; 
+    }
+    .i7{
+        width: 300px;
+        height: 200px;
+        transition: transform .2s;
+        -webkit-transition: 0.5s linear;
+        transition: 0.5s linear;
+        background-color: #F1C40F;
+    }
+    .i7:hover {
+        transform: scale(1.2); 
+        -webkit-box-shadow: 5px 5px 7px 1px; 
+    }
+    .i8{
+        width: 300px;
+        height: 200px;
+        transition: transform .2s;
+        -webkit-transition: 0.5s linear;
+        transition: 0.5s linear;
+        background-color: #F1C40F;
+    }
+    .i8:hover {
+        transform: scale(1.2); 
+        -webkit-box-shadow: 5px 5px 7px 1px;
+    }
+    .i9{
+        width: 300px;
+        height: 200px;
+        transition: transform 0.2s;
+        -webkit-transition: 0.5s linear;
+        transition: 0.5s linear;
+        background-color: #F1C40F;
+    }
+    .i9:hover {
+        transform: scale(1.2); 
+        -webkit-box-shadow: 5px 5px 7px 1px;
+    }
+    .jordan0{
+        width: 500px;
+        height: 400px;
+    }
+    .principal li {
+	width: 100%;
+	list-style: none;
+    }
+
+    .principal img {
+        width: 100%;
+    }
+    @keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: 100;}
+	70% {margin-left: 100;}
+	
+	75% {margin-left: 0;}
+	100% {margin-left: 0;}
+}
+
+
+</style>
+<head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+
+
+<div class="pagina">
+<div class="rejilla">
+    
+    <div class="barra">
+        <div class="barraprincipal" >
+        <h1>aloaloels Shop</h1>
+        </div>
+            <div class="barrahome">
+             <span>home</span>
+            </div>
+            <div class="barrashop">
+                <span>shop</span>
+            </div>
+            <div class="barracontact">
+                <span>contact</span>
+            </div>
+            <div class="barraofertas">
+                <span>ofertas</span>
+            </div>
+    </div>
+
+    <div class="principal">
+        <ul>
+            <li>
+                <img src="https://www.gigantes.com/wp-content/uploads/2020/01/kobe-bryant-mamba.jpg">
+            </li>
+            <li>
+                <img src="https://www.mundodeportivo.com/r/GODO/MD/p8/Baloncesto/Imagenes/2021/01/26/Recortada/img_sperezm_20210125-161836_imagenes_md_otras_fuentes_last-kqpB-U491750968418fCI-980x554@MundoDeportivo-Web-Portada.jpg">
+            </li>
+        </ul>
+    </div>
+  
+    <div class="s1">
+        <h2 class="titulos2">Jordan "Why Not?" Zer0.4</h2>
+        <img  class="jordan0" width="400px" height="300px" src="https://zapasnews.com/wp-content/uploads/2021/02/Jordan-Why-Not-Zer0.4-DD4886-007-Release-Date-4.jpg">
+        
+    </div>
+
+    <div class="s2">
+        <h2 class="titulos2"> El disseny que s'inspira en les Jordan "Why Not?" Zer0.4, les primeres en incorporar una unitat Zoom doble a l'avantpeu. És un sistema d'amortiment amb una resposta increïble, dissenyat per ajudar-lo a transformar la seva velocitat en força i concentrar el seu atac.</h2>
+    </div>
+
+    <div class="s3">
+       <h2 class="titulos2"> Mes Populars</h2> 
+        <div>
+            <div >
+                <img class="i1" src="https://zapasnews.com/wp-content/uploads/2021/02/Jordan-Why-Not-Zer0.4-DD4886-007-Release-Date-4.jpg">
+                <img class="i2" src="https://i.blogs.es/011ca8/nike/450_1000.jpg">
+                <img class="i3" src="https://i2.wp.com/clipset.com/wp-content/uploads/2019/01/Nike-Adapt-BB.jpg?fit=840%2C600&ssl=1">  
+                <img class="i4" src="https://zapasnews.com/wp-content/uploads/2021/02/Jordan-Why-Not-Zer0.4-DD4886-007-Release-Date-4.jpg">
+                <img class="i5" src="https://i.blogs.es/011ca8/nike/450_1000.jpg">
+                <img class="i6" src="https://i2.wp.com/clipset.com/wp-content/uploads/2019/01/Nike-Adapt-BB.jpg?fit=840%2C600&ssl=1">  
+                <img class="i7" src="https://zapasnews.com/wp-content/uploads/2021/02/Jordan-Why-Not-Zer0.4-DD4886-007-Release-Date-4.jpg">
+                <img class="i8" src="https://i.blogs.es/011ca8/nike/450_1000.jpg">
+                <img class="i9" src="https://i2.wp.com/clipset.com/wp-content/uploads/2019/01/Nike-Adapt-BB.jpg?fit=840%2C600&ssl=1">  
+            </div>
+        </div>
+    </div>
+
+    <div class="pie">
+        <div class="redes">
+        <div class="redes1"><i class="far fa-envelope">aloaloels@gmail.com</i></div> 
+        <div class="redes2"><i class="far fa-envelope">tecnicaloa@gmail.com</i></div> 
+        <div class="redes3"><i class="fab fa-instagram">@aloaloels</i></div>
+        <div class="redes4"><i class="fab fa-twitter">@aloaloels</i></div>   
+        <div class="redes5"><i class="fab fa-youtube">youtube.com/aloaloels</i></div>   
+        <div class="redes6"><i class="fab fa-facebook">@aloaloels</i></div>   
+        </div>     
+        
+    </div>
+
+</div>
+</div>
